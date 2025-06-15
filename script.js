@@ -15,14 +15,29 @@ function updateMeter(count) {
         status.textContent = "Your pet is full of energy!";
         petImg.src = "images/happypet.jpg";
         container.classList.add("happy");
-    } else if (count <= 4) {
+    } else if (count === 1) {
+        meter.style.background = "#8BC34A"; // Light Green
+        status.textContent = "Your pet is still energetic, but starting to get a bit tired...";
+        petImg.src = "images/happypet.jpg";
+        container.classList.add("tired");
+    } else if (count === 2) {
+        meter.style.background = "#CDDC39"; // Lime
+        status.textContent = "Your pet is getting sleepy. Maybe it's time for a break?";
+        petImg.src = "images/happypet.jpg";
+        container.classList.add("tired");
+    } else if (count === 3) {
         meter.style.background = "#FFC107"; // Yellow
-        status.textContent = "Your pet is getting tired...";
+        status.textContent = "Your pet is really tired now. Please give them a rest!";
+        petImg.src = "images/sadpet.jpg";
+        container.classList.add("tired");
+    } else if (count === 4) {
+        meter.style.background = "#FF9800"; // Orange
+        status.textContent = "⚠️ WARNING: Your pet is extremely tired! One more and they'll be exhausted!";
         petImg.src = "images/sadpet.jpg";
         container.classList.add("tired");
     } else {
         meter.style.background = "#F44336"; // Red
-        status.textContent = "Your pet needs a rest!";
+        status.textContent = "Your pet is completely exhausted! They need a long rest now!";
         petImg.src = "images/deadpet.jpg";
         container.classList.add("exhausted");
     }
