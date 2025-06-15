@@ -4,42 +4,42 @@ function updateMeter(count) {
     const meter = document.getElementById("meter");
     const status = document.getElementById("status");
     const petImg = document.getElementById("pet-img");
-    const container = document.querySelector(".container");
+    const petCard = document.querySelector(".pet-card");
     console.log("Updating meter with count:", count);
 
     // Remove all state classes
-    container.classList.remove("happy", "tired", "exhausted");
+    petCard.classList.remove("happy", "tired", "exhausted");
 
     if (count === 0) {
         meter.style.background = "#4CAF50"; // Green
         status.textContent = "Your pet is full of energy!";
         petImg.src = "images/happypet.jpg";
-        container.classList.add("happy");
+        petCard.classList.add("happy");
     } else if (count === 1) {
         meter.style.background = "#8BC34A"; // Light Green
         status.textContent = "Your pet is still energetic, but starting to get a bit tired...";
         petImg.src = "images/happypet.jpg";
-        container.classList.add("tired");
+        petCard.classList.add("tired");
     } else if (count === 2) {
         meter.style.background = "#CDDC39"; // Lime
         status.textContent = "Your pet is getting sleepy. Maybe it's time for a break?";
         petImg.src = "images/happypet.jpg";
-        container.classList.add("tired");
+        petCard.classList.add("tired");
     } else if (count === 3) {
         meter.style.background = "#FFC107"; // Yellow
         status.textContent = "Your pet is really tired now. Please give them a rest!";
         petImg.src = "images/sadpet.jpg";
-        container.classList.add("tired");
+        petCard.classList.add("tired");
     } else if (count === 4) {
         meter.style.background = "#FF9800"; // Orange
         status.textContent = "⚠️ WARNING: Your pet is extremely tired! One more and they'll be exhausted!";
         petImg.src = "images/sadpet.jpg";
-        container.classList.add("tired");
+        petCard.classList.add("tired");
     } else {
         meter.style.background = "#F44336"; // Red
         status.textContent = "Your pet is completely exhausted! They need a long rest now!";
         petImg.src = "images/deadpet.jpg";
-        container.classList.add("exhausted");
+        petCard.classList.add("exhausted");
     }
 }
 

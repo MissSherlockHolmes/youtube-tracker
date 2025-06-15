@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Pet Energy Meter</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Energy Meter</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Pet Energy Meter</h1>
-    <div id="pet-image" class="pet-image">
-      <img src="images/happypet.jpg" alt="Happy Pet" id="pet-img">
-    </div>
-    <div id="meter" class="meter-bar"></div>
-    <p id="status">Loading...</p>
-  </div>
-  <script src="script.js"></script>
+    <header class="app-header">
+        <h1 class="app-title">Pet Energy Meter</h1>
+    </header>
+    
+    <main class="main-content">
+        <div class="pet-card">
+            <div class="pet-container">
+                <img src="images/happypet.jpg" alt="Happy Pet" id="pet-img" class="pet-image">
+            </div>
+            <div class="meter-container">
+                <div id="meter" class="meter-bar"></div>
+            </div>
+            <p id="status">Loading...</p>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
 </body>
 </html> 
